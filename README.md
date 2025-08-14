@@ -1,41 +1,27 @@
-# Vuvo Hosting Website
+# NABO: NOS Accounts Back Office
 
-Website corporativo em Next.js 14, TypeScript e Tailwind CSS.
+Aplicação Next.js com autenticação básica e proxy para contas.
 
-## Instalação
+## Como rodar
 
 ```bash
 npm install
-```
-
-## Desenvolvimento
-
-```bash
 npm run dev
-```
-
-## Build de produção
-
-```bash
-npm run build
 ```
 
 ## Variáveis de ambiente
 
-Copiar `.env.example` para `.env.local` e preencher:
+Copie `.env.example` para `.env.local` e ajuste conforme necessário.
 
-- `RESEND_API_KEY` – chave para envio de email
-- `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` – domínio para Plausible
-- `NEXT_PUBLIC_GA_ID` – ID do GA4 (opcional)
-- `WHATSAPP_NUMBER` – número usado nos links de WhatsApp
+```env
+BASIC_AUTH_USER=admin
+BASIC_AUTH_PASS=admin
+EXTERNAL_API_BASE_URL=https://api.exemplo.com
+```
 
-## Deploy
+- `BASIC_AUTH_USER` / `BASIC_AUTH_PASS`: credenciais para Basic Auth.
+- `EXTERNAL_API_BASE_URL`: endpoint da API externa utilizada no proxy.
 
-Optimizado para Vercel (`npm run build` + `npm start`).
+## Credenciais e endpoint
 
-## Próximos passos
-
-- Adicionar conteúdo real (casos, blog, FAQs)
-- Integrar envio de email com Resend/Nodemailer
-- Ajustar cores conforme identidade final
-- Rever contactos e textos
+Para alterar as credenciais ou o endpoint externo, edite o arquivo `.env.local` com os valores desejados.
